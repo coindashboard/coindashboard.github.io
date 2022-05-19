@@ -1,0 +1,23 @@
+{
+  "title": "Chainlink",
+  "description": "Currency conversion using chainlink.",
+  "type": "object",
+  "patternProperties": {
+    "^[A-Za-z0-9\\-]+$": {
+      "description": "The name of the network e.g. ethereum",
+        "type": "object",
+        "patternProperties": {
+        "^[A-Za-z0-9\\-]+$": {
+          "description": "Currency converting to e.g. USD",
+          "type": "object",
+          "patternProperties": {
+            "^[A-Za-z0-9\\-]+$": {
+              "description": "Currency converting from e.g. ETH",
+              "type": "string"
+            }
+          }
+        }
+	    }
+    }
+  }
+}

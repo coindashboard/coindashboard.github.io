@@ -1,0 +1,45 @@
+{
+  "title": "Network",
+  "description": "List of networks with rpc and currency/token contracts.",
+  "type": "array",
+  "items": {
+    "anyOf": [
+      {
+        "type": "object",
+        "required": ["networkId", "url", "currency", "currencyLabel", "erc20Tokens"],
+        "properties": {
+          "networkId": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "currencyLabel": {
+            "type": "string"
+          },
+          "erc20Tokens": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["address", "currency", "currencyLabel"],
+              "properties": {
+                "address": {
+                  "type": "string"
+                },
+                "currency": {
+                  "type": "string"
+                },
+                "currencyLabel": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

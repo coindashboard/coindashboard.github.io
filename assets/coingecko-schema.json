@@ -1,0 +1,15 @@
+{
+  "title": "Coin Gecko",
+  "description": "List of aliases for coingecko network",
+  "type": "object",
+  "patternProperties": {
+    "^[A-Za-z0-9\\-]+$": {
+      "description": "The name of the coin e.g. ETH",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "The coingecko name of the coin e.g. ethereum"
+      }
+    }
+  }
+}

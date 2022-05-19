@@ -1,0 +1,14 @@
+{
+  "title": "Address",
+  "description": "List of networks listing public addresses.",
+  "type": "object",
+  "patternProperties": {
+    "^[A-Za-z0-9\\-]+$": {
+      "description": "The name of the network e.g. ethereum",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
